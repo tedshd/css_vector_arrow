@@ -1,13 +1,15 @@
 .symbol_arrow_left {
+  display: inline-block;
   position: relative;
-  height: 18px;
-  width: 18px;
+  height: 32px;
+  width: 32px;
 }
 
 .symbol_arrow_right {
+  display: inline-block;
   position: relative;
-  height: 18px;
-  width: 18px;
+  height: 32px;
+  width: 32px;
 }
 .symbol_arrow_right:before {
   position: absolute;
@@ -15,9 +17,10 @@
   top: 0;
   left: 0;
   display: block;
-  width: calc((18px / 2)*1.14142);
-  border: calc(18px*(1/16)) solid #000;
-  transform: rotate(45deg) translate(calc((18px / 2)*(1 - (1/1.14142)/2)), calc(calc(18px*(1/16)) / 1.14142));
+  width: calc((32px / 2)*1.141421356);
+  height: calc(calc(32px*(1/15.5))*2);
+  background: #141414;
+  transform: rotate(45deg) translate(calc((32px / 2)*(1 - (1/1.141421356)/2)), calc((calc(32px*(1/15.5)) / 1.141421356)*2));
 }
 .symbol_arrow_right:after {
   position: absolute;
@@ -25,9 +28,10 @@
   left: 0;
   content: "";
   display: block;
-  width: calc((18px / 2)*1.14142);
-  border: calc(18px*(1/16)) solid #000;
-  transform: rotate(-45deg) translate(calc((18px / 2)*(1 - (1/1.14142)/2)), calc(calc(-18px*(1/16)) / 1.14142));
+  width: calc((32px / 2)*1.141421356);
+  height: calc(calc(32px*(1/15.5))*2);
+  background: #141414;
+  transform: rotate(-45deg) translate(calc((32px / 2)*(1 - (1/1.141421356)/2)), calc((calc(-32px*(1/15.5)) / 1.141421356)*2));
 }
 
 .symbol_arrow_left:before {
@@ -36,9 +40,10 @@
   top: 0;
   right: 0;
   display: block;
-  width: calc((18px / 2)*1.14142);
-  border: calc(18px*(1/16)) solid #000;
-  transform: rotate(-45deg) translate(calc(0px - calc((18px / 2)*(1 - (1/1.14142)/2))), calc(0px - calc(calc(-18px*(1/16)) / 1.14142)));
+  width: calc((32px / 2)*1.141421356);
+  height: calc(calc(32px*(1/15.5))*2);
+  background: #141414;
+  transform: rotate(-45deg) translate(calc(0px - calc((32px / 2)*(1 - (1/1.141421356)/2))), calc(0px - calc((calc(-32px*(1/15.5)) / 1.141421356)*2)));
 }
 .symbol_arrow_left:after {
   position: absolute;
@@ -46,7 +51,8 @@
   right: 0;
   content: "";
   display: block;
-  width: calc((18px / 2)*1.14142);
-  border: calc(18px*(1/16)) solid #000;
-  transform: rotate(45deg) translate(calc(0px - calc((18px / 2)*(1 - (1/1.14142)/2))), calc(0px - calc(calc(18px*(1/16)) / 1.14142)));
+  width: calc((32px / 2)*1.141421356);
+  height: calc(calc(32px*(1/15.5))*2);
+  background: #141414;
+  transform: rotate(45deg) translate(calc(0px - calc((32px / 2)*(1 - (1/1.141421356)/2))), calc(0px - calc((calc(32px*(1/15.5)) / 1.141421356)*2)));
 }
