@@ -1,0 +1,55 @@
+:root {
+  --symbol-size: 18px;
+  --symbol-size-negative: -18px;
+  --offset-x: calc((var(--symbol-size) / 2)*(1 - (1/1.14142)/2));
+  --symbol-arrow-width: calc(var(--symbol-size)*(1/16));
+  --symbol-arrow-width-bottom: calc(var(--symbol-size-negative)*(1/16));
+}
+
+.symbol_arrow_left,
+.symbol_arrow_right {
+  position: relative;
+  height: var(--symbol-size);
+  width: var(--symbol-size);
+}
+.symbol_arrow_right:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  display: block;
+  width: calc((var(--symbol-size) / 2)*1.14142);
+  border: var(--symbol-arrow-width) solid #000;
+  transform: rotate(45deg) translate(var(--offset-x), calc(var(--symbol-arrow-width) / 1.14142));
+}
+.symbol_arrow_right:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: calc((var(--symbol-size) / 2)*1.14142);
+  border: var(--symbol-arrow-width) solid #000;
+  transform: rotate(-45deg) translate(var(--offset-x), calc(var(--symbol-arrow-width-bottom) / 1.14142));
+}
+
+.symbol_arrow_left:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  display: block;
+  width: calc((var(--symbol-size) / 2)*1.14142);
+  border: var(--symbol-arrow-width) solid #000;
+  transform: rotate(-45deg) translate(calc(0px - var(--offset-x)), calc(0px - calc(var(--symbol-arrow-width-bottom) / 1.14142)));
+}
+.symbol_arrow_left:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  display: block;
+  width: calc((var(--symbol-size) / 2)*1.14142);
+  border: var(--symbol-arrow-width) solid #000;
+  transform: rotate(45deg) translate(calc(0px - var(--offset-x)), calc(0px - calc(var(--symbol-arrow-width) / 1.14142)));
+}
